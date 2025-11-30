@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Perles d'Élégance - Bijoux en perles</title>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- ===== HEADER ===== -->
+  <header class="site-header">
+    <div class="container header-content">
+      <div class="logo">✨ Perles d'Élégance</div>
+
+      <nav class="main-nav">
+        <a href="#hero">Accueil</a>
+        <a href="#bijoux">Bijoux</a>
+        <a href="#a-propos">À propos</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <button class="btn btn-outline whatsapp-btn" id="header-whatsapp-btn">
+        Commander WhatsApp
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section id="hero" class="hero">
+    <div class="container hero-content">
+      <div class="hero-text">
+        <h1>Bijoux fantaisie en perles, faits avec amour.</h1>
+        <p>
+          Bracelets, colliers et boucles faits main avec soin pour sublimer votre élégance.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#bijoux" class="btn btn-primary">Voir les bijoux</a>
+          <button class="btn btn-outline whatsapp-btn" id="hero-whatsapp-btn">
+            Commander WhatsApp
+          </button>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="hero-image-placeholder">Votre univers de perles</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PRODUITS ===== -->
+  <section id="bijoux" class="section">
+    <div class="container">
+      <h2>Nos bijoux en perles</h2>
+      <p class="section-intro">
+        Découvrez nos créations disponibles dès maintenant.
+      </p>
+
+      <div id="products-grid" class="products-grid"></div>
+    </div>
+  </section>
+
+  <!-- ===== A PROPOS ===== -->
+  <section id="a-propos" class="section section-soft">
+    <div class="container">
+      <h2>À propos</h2>
+
+      <p class="section-intro">
+        Bijoux artisanaux en perles, créés pour révéler votre élégance.
+      </p>
+
+      <div class="about-grid">
+        <div class="about-card">
+          <h3>Fait main</h3>
+          <p>Chaque bijou est fabriqué soigneusement à la main.</p>
+        </div>
+
+        <div class="about-card">
+          <h3>Perles de qualité</h3>
+          <p>Nous choisissons des perles résistantes, belles et durables.</p>
+        </div>
+
+        <div class="about-card">
+          <h3>Cadeaux parfaits</h3>
+          <p>Des bijoux uniques pour offrir et se faire plaisir.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contact" class="section">
+    <div class="container">
+      <h2>Contact & Commandes</h2>
+
+      <p class="section-intro">
+        Commandez vos bijoux directement via WhatsApp.
+      </p>
+
+      <div class="contact-box">
+        <p>Numéro WhatsApp :</p>
+        <p id="whatsapp-display" class="contact-number"></p>
+
+        <button class="btn btn-primary whatsapp-btn" id="contact-whatsapp-btn">
+          Envoyer un message WhatsApp
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p>© 2025 Perles d'Élégance - Tous droits réservés.</p>
+      <a href="#hero" class="back-to-top">Retour en haut ↑</a>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
