@@ -3,8 +3,8 @@
 // ==========================
 
 // Remplace par ton vrai numéro (sans +)
-const WHATSAPP_NUMBER = "2250700000000";
-const WHATSAPP_DISPLAY = "+225 07 00 00 00 00";
+const WHATSAPP_NUMBER = "2250103021890";
+const WHATSAPP_DISPLAY = "+225 01 03 02 18 90";
 
 
 // ==========================
