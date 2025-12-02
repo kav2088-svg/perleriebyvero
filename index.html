@@ -3,54 +3,130 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Perles de vero - Bijoux en perles</title>
+  <meta name="description" content="Bijoux fantaisie en perles faits main - Bracelets, colliers et boucles d'oreilles élégants. Commandez via WhatsApp." />
+  <title>Perleriebyvero - Bijoux en perles faits main ✨</title>
 
-  <!-- Google Font -->
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome pour icônes -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
   <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
   <!-- ===== HEADER ===== -->
-  <header class="site-header">
+  <header class="site-header" id="header">
     <div class="container header-content">
-      <div class="logo">✨ Perleriebyvero</div>
+      <div class="logo">
+        <span class="logo-icon">✨</span>
+        <span class="logo-text">Perleriebyvero</span>
+      </div>
 
-      <nav class="main-nav">
-        <a href="#hero">Accueil</a>
-        <a href="#bijoux">Bijoux</a>
-        <a href="#a-propos">À propos</a>
-        <a href="#contact">Contact</a>
+      <nav class="main-nav" id="main-nav" aria-label="Navigation principale">
+        <a href="#hero" class="nav-link">Accueil</a>
+        <a href="#bijoux" class="nav-link">Bijoux</a>
+        <a href="#a-propos" class="nav-link">À propos</a>
+        <a href="#contact" class="nav-link">Contact</a>
       </nav>
 
-      <button class="btn btn-outline whatsapp-btn" id="header-whatsapp-btn">
-        Commander WhatsApp
-      </button>
+      <div class="header-actions">
+        <button class="cart-toggle" id="cart-toggle" aria-label="Ouvrir le panier">
+          <i class="fas fa-shopping-bag"></i>
+          <span class="cart-count" id="cart-count">0</span>
+        </button>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Menu mobile" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
     </div>
   </header>
 
+  <!-- ===== PANIER LATÉRAL ===== -->
+  <aside class="cart-sidebar" id="cart-sidebar" aria-hidden="true">
+    <div class="cart-header">
+      <h2>Mon Panier</h2>
+      <button class="cart-close" id="cart-close" aria-label="Fermer le panier">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+    <div class="cart-content" id="cart-content">
+      <div class="cart-empty" id="cart-empty">
+        <i class="fas fa-shopping-bag"></i>
+        <p>Votre panier est vide</p>
+        <a href="#bijoux" class="btn btn-primary">Découvrir nos bijoux</a>
+      </div>
+    </div>
+    <div class="cart-footer" id="cart-footer" style="display: none;">
+      <div class="cart-total">
+        <span>Total :</span>
+        <span class="cart-total-price" id="cart-total-price">0 FCFA</span>
+      </div>
+      <button class="btn btn-primary btn-block whatsapp-checkout" id="whatsapp-checkout">
+        <i class="fab fa-whatsapp"></i>
+        Commander via WhatsApp
+      </button>
+    </div>
+  </aside>
+  <div class="cart-overlay" id="cart-overlay"></div>
+
   <!-- ===== HERO ===== -->
   <section id="hero" class="hero">
+    <div class="hero-background"></div>
     <div class="container hero-content">
       <div class="hero-text">
-        <h1>Bijoux fantaisie en perles, faits avec amour.</h1>
-        <p>
-          Bracelets, colliers et boucles faits main avec soin pour sublimer votre élégance.
+        <div class="hero-badge">
+          <i class="fas fa-sparkles"></i>
+          <span>Bijoux faits main</span>
+        </div>
+        <h1>
+          <span class="hero-title-line">Bijoux fantaisie en perles</span>
+          <span class="hero-title-line accent">faits avec amour</span>
+        </h1>
+        <p class="hero-description">
+          Découvrez notre collection unique de bracelets, colliers et boucles d'oreilles 
+          artisanaux. Chaque bijou est créé avec soin pour révéler votre élégance naturelle.
         </p>
 
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-number">100%</span>
+            <span class="stat-label">Fait main</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">+50</span>
+            <span class="stat-label">Créations</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">⭐ 4.9</span>
+            <span class="stat-label">Satisfaction</span>
+          </div>
+        </div>
+
         <div class="hero-actions">
-          <a href="#bijoux" class="btn btn-primary">Voir les bijoux</a>
-          <button class="btn btn-outline whatsapp-btn" id="hero-whatsapp-btn">
-            Commander WhatsApp
+          <a href="#bijoux" class="btn btn-primary btn-large">
+            <span>Découvrir la collection</span>
+            <i class="fas fa-arrow-down"></i>
+          </a>
+          <button class="btn btn-outline btn-large whatsapp-btn" id="hero-whatsapp-btn">
+            <i class="fab fa-whatsapp"></i>
+            <span>Nous contacter</span>
           </button>
         </div>
       </div>
 
       <div class="hero-visual">
-        <div class="hero-image-placeholder">Votre univers de perles</div>
+        <div class="hero-image-wrapper">
+          <div class="hero-image-placeholder">
+            <i class="fas fa-gem"></i>
+            <span>Votre univers de perles</span>
+          </div>
+          <div class="hero-decoration"></div>
+        </div>
       </div>
     </div>
   </section>
@@ -58,10 +134,22 @@
   <!-- ===== PRODUITS ===== -->
   <section id="bijoux" class="section">
     <div class="container">
-      <h2>Nos bijoux en perles</h2>
-      <p class="section-intro">
-        Découvrez nos créations disponibles dès maintenant.
-      </p>
+      <div class="section-header">
+        <h2>Nos bijoux en perles</h2>
+        <p class="section-intro">
+          Découvrez nos créations artisanales, chaque pièce est unique et confectionnée avec passion.
+        </p>
+      </div>
+
+      <!-- Filtres -->
+      <div class="filters" id="filters">
+        <button class="filter-btn active" data-filter="all">Tous</button>
+        <button class="filter-btn" data-filter="Bracelet">Bracelets</button>
+        <button class="filter-btn" data-filter="Collier">Colliers</button>
+        <button class="filter-btn" data-filter="Boucles">Boucles</button>
+        <button class="filter-btn" data-filter="Ensemble">Ensembles</button>
+        <button class="filter-btn" data-filter="Choker">Chokers</button>
+      </div>
 
       <div id="products-grid" class="products-grid"></div>
     </div>
@@ -70,26 +158,60 @@
   <!-- ===== A PROPOS ===== -->
   <section id="a-propos" class="section section-soft">
     <div class="container">
-      <h2>À propos</h2>
-
-      <p class="section-intro">
-        Bijoux artisanaux en perles, créés pour révéler votre élégance.
-      </p>
+      <div class="section-header">
+        <h2>Pourquoi nous choisir ?</h2>
+        <p class="section-intro">
+          L'excellence dans chaque détail, la passion dans chaque création.
+        </p>
+      </div>
 
       <div class="about-grid">
         <div class="about-card">
-          <h3>Fait main</h3>
-          <p>Chaque bijou est fabriqué soigneusement à la main.</p>
+          <div class="about-icon">
+            <i class="fas fa-hand-sparkles"></i>
+          </div>
+          <h3>Fait main avec passion</h3>
+          <p>Chaque bijou est fabriqué soigneusement à la main avec attention aux détails et passion pour l'artisanat.</p>
         </div>
 
         <div class="about-card">
-          <h3>Perles de qualité</h3>
-          <p>Nous choisissons des perles résistantes, belles et durables.</p>
+          <div class="about-icon">
+            <i class="fas fa-gem"></i>
+          </div>
+          <h3>Perles de qualité supérieure</h3>
+          <p>Nous sélectionnons uniquement des perles de qualité, résistantes et durables pour garantir la longévité de vos bijoux.</p>
         </div>
 
         <div class="about-card">
+          <div class="about-icon">
+            <i class="fas fa-heart"></i>
+          </div>
           <h3>Cadeaux parfaits</h3>
-          <p>Des bijoux uniques pour offrir et se faire plaisir.</p>
+          <p>Des bijoux uniques et élégants, parfaits pour offrir à vos proches ou vous faire plaisir.</p>
+        </div>
+
+        <div class="about-card">
+          <div class="about-icon">
+            <i class="fas fa-shipping-fast"></i>
+          </div>
+          <h3>Livraison rapide</h3>
+          <p>Commandez facilement via WhatsApp et recevez vos bijoux rapidement, partout en Côte d'Ivoire.</p>
+        </div>
+
+        <div class="about-card">
+          <div class="about-icon">
+            <i class="fas fa-palette"></i>
+          </div>
+          <h3>Personnalisation possible</h3>
+          <p>Nous pouvons créer des bijoux sur mesure selon vos préférences de couleurs et de styles.</p>
+        </div>
+
+        <div class="about-card">
+          <div class="about-icon">
+            <i class="fas fa-award"></i>
+          </div>
+          <h3>Garantie satisfaction</h3>
+          <p>Votre satisfaction est notre priorité. Nous garantissons la qualité de chaque création.</p>
         </div>
       </div>
     </div>
@@ -98,19 +220,46 @@
   <!-- ===== CONTACT ===== -->
   <section id="contact" class="section">
     <div class="container">
-      <h2>Contact & Commandes</h2>
+      <div class="section-header">
+        <h2>Commandez vos bijoux</h2>
+        <p class="section-intro">
+          Contactez-nous directement via WhatsApp pour passer votre commande ou obtenir plus d'informations.
+        </p>
+      </div>
 
-      <p class="section-intro">
-        Commandez vos bijoux directement via WhatsApp.
-      </p>
+      <div class="contact-grid">
+        <div class="contact-box">
+          <div class="contact-icon">
+            <i class="fab fa-whatsapp"></i>
+          </div>
+          <h3>WhatsApp</h3>
+          <p class="contact-number" id="whatsapp-display"></p>
+          <p class="contact-note">Réponse rapide garantie</p>
+          <button class="btn btn-primary whatsapp-btn" id="contact-whatsapp-btn">
+            <i class="fab fa-whatsapp"></i>
+            Envoyer un message
+          </button>
+        </div>
 
-      <div class="contact-box">
-        <p>Numéro WhatsApp :</p>
-        <p id="whatsapp-display" class="contact-number"></p>
+        <div class="contact-box">
+          <div class="contact-icon">
+            <i class="fas fa-clock"></i>
+          </div>
+          <h3>Horaires</h3>
+          <p>Lundi - Vendredi : 9h - 18h</p>
+          <p>Samedi : 10h - 16h</p>
+          <p class="contact-note">Dimanche : Fermé</p>
+        </div>
 
-        <button class="btn btn-primary whatsapp-btn" id="contact-whatsapp-btn">
-          Envoyer un message WhatsApp
-        </button>
+        <div class="contact-box">
+          <div class="contact-icon">
+            <i class="fas fa-info-circle"></i>
+          </div>
+          <h3>Informations</h3>
+          <p>Commandes personnalisées acceptées</p>
+          <p>Paiement à la livraison disponible</p>
+          <p class="contact-note">Livraison partout en Côte d'Ivoire</p>
+        </div>
       </div>
     </div>
   </section>
@@ -118,10 +267,55 @@
   <!-- ===== FOOTER ===== -->
   <footer class="site-footer">
     <div class="container footer-content">
-      <p>© 2025 Perleriebyvero - Tous droits réservés.</p>
-      <a href="#hero" class="back-to-top">Retour en haut ↑</a>
+      <div class="footer-section">
+        <div class="footer-logo">
+          <span class="logo-icon">✨</span>
+          <span class="logo-text">Perleriebyvero</span>
+        </div>
+        <p class="footer-tagline">Bijoux en perles faits main avec amour</p>
+      </div>
+
+      <div class="footer-section">
+        <h4>Navigation</h4>
+        <nav class="footer-nav">
+          <a href="#hero">Accueil</a>
+          <a href="#bijoux">Bijoux</a>
+          <a href="#a-propos">À propos</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+
+      <div class="footer-section">
+        <h4>Suivez-nous</h4>
+        <div class="social-links">
+          <a href="#" class="social-link" aria-label="Facebook">
+            <i class="fab fa-facebook"></i>
+          </a>
+          <a href="#" class="social-link" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="#" class="social-link whatsapp-btn" id="footer-whatsapp-btn" aria-label="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2025 Perleriebyvero - Tous droits réservés.</p>
+        <a href="#hero" class="back-to-top" aria-label="Retour en haut">
+          <i class="fas fa-arrow-up"></i>
+        </a>
+      </div>
     </div>
   </footer>
+
+  <!-- Bouton WhatsApp flottant -->
+  <a href="#" class="whatsapp-float" id="whatsapp-float" aria-label="Contacter via WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+    <span class="whatsapp-tooltip">Nous contacter</span>
+  </a>
 
   <script src="main.js"></script>
 </body>
